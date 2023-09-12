@@ -6,14 +6,17 @@ export default function Entry(props){
     console.log(props.description)
     return (
         <div className="entry">
-           <img src= {props.imageUrl} className="entry-image" />
-           <section className="details">
-                <div className="country">
-                    <img src={pinpoint} />
-                    <span>{props.location}</span>
-                    <a href={props.googleMapsUrl}>View on Google Maps</a>
+            <img src= {props.imageUrl} className="entry-image" />
+            <section className="entry-details">
+                <div className="entry-header">
+                    <img className="entry-pinpoint" src={pinpoint} />
+                    <span className="entry-location">{props.location}</span>
+                    <a className="entry-MapsUrl" href={props.googleMapsUrl}>View on Google Maps</a>
                 </div>
-           </section>
+                <h1 className="entry-title">{props.title}</h1>
+                <h2 className="entry-date">{props.startDate} - {props.endDate}</h2>
+                <p>{props.description}</p>
+            </section>
         </div>
     )
 }
